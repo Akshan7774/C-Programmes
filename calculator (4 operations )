@@ -44,3 +44,4 @@ cout << "Not a recognized operation, 'please enter +, -, / or *'. ";
 }
 
 return 0;
+}
