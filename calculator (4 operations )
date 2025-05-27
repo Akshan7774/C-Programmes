@@ -1,6 +1,7 @@
 /* c++ calculator 
 allows decimal numbers 
-4 operations (+,-,/,*)*/
+4 operations (+,-,/,*)
+*/
 
 #include <iostream>
 using namespace std;
@@ -39,8 +40,7 @@ cout << number1 * number2;
 
 else {
 
-cout << "Not a recognized operation";
+cout << "Not a recognized operation, 'please enter +, -, / or *'. ";
 }
 
 return 0;
-}
