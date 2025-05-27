@@ -1,0 +1,16 @@
+/* code to manipulate feet to inches and feet, 100 feet can be changed to whatever integer.
+The use of mathematical symbols was the main focus point, eg. division and remainder*/
+
+#include <iostream>
+
+using namespace std; 
+
+int main() {
+    
+int inches;
+inches = 100;
+cout<< inches<<"inch(es) =";
+cout<<inches/12<<"feet (foot) and ";
+cout<<inches%12<<"inches"<< endl;
+    return 0;
+}
