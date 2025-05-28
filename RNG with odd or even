@@ -1,0 +1,41 @@
+#include<iostream>
+#include<random>
+using namespace std; 
+
+int main ()
+{
+
+    random_device rd; 
+    mt19937 gen(rd());
+
+    int min, max; 
+
+    cout<<"Enter Minimum Number: ";
+    cin>>min;
+
+    cout<<"Enter Maximum Number:";
+    cin>>max;
+    
+    if (min>max){
+        
+        cout<<" Minimum Number greater than Maximum Number, please rechoose"<<endl; 
+    }
+
+    uniform_int_distribution<>distr(min, max);
+
+    int randomNumber = distr(gen);
+
+    cout<<"Random Number Between " <<min<< " and " <<max<< " is " << randomNumber; 
+   
+    
+    
+    if (randomNumber % 2 == 0 ){
+        cout <<" which is an even number "; 
+        
+    } else {
+        
+        cout<<" which is an odd number"; 
+    }
+
+    return 0;
+}
