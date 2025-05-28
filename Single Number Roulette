@@ -1,0 +1,36 @@
+#include<iostream>
+#include<random>
+using namespace std; 
+
+int main ()
+{
+
+    random_device rd; 
+    mt19937 gen(rd());
+
+    int one, two, three, four, five, six,seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone, twentytwo, twentythree, twentyfive, twentysix, twentyeight, twentynine, thirty, thirtyone, thirtytwo, thirtythree, thirtyfour, thirtyfive; 
+    
+    double lucky; 
+
+    cout<<"Enter a number: ";
+    cin>>lucky; 
+    
+
+
+    uniform_int_distribution<>distr(0, 35);
+
+    int randomNumber = distr(gen);
+
+    cout<<" Number between " <<0<< " and " <<35<< " is " << randomNumber; 
+   
+    
+    
+    if (randomNumber == lucky ) {
+        cout<<" You Win ";
+    } else {
+        
+        cout<<" Better Luck Next Time !";
+    }
+
+    return 0;
+}
