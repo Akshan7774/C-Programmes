@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cmath>
+using namespace std; 
+
+
+int main ()
+{
+    
+/* Introduce Variables*/ 
+double A, P, r, n, t, ci; 
+
+/* Ask for amounts/values to input*/ 
+
+cout<< " What is the initial balance(P) ? "; 
+cin>>P; 
+
+cout<< " What is the interest rate(r) ? "; 
+cin>>r; 
+
+
+cout<<" What is the time period (t) ? "; 
+cin>>t; 
+
+ci = P* pow((1+r/100),t)-P; 
+cout<<" Compound interest over "<<t<<" years"<<" with an initial balance of R"<<P<<" with an interest rate of "<<r<<" percent is " <<ci; 
+
+
+
+    return 0; 
+}
