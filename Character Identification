@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cctype>
+using namespace std; 
+
+int main()
+
+{
+  
+  
+  char userchar; 
+  
+  cout<<" Please Enter a Character; ";
+  cin>>noskipws>>userchar; 
+  
+  cout<<" The character that you've entered is "<<userchar<<endl; 
+  
+  if (islower(userchar))
+  {
+     
+      cout<<" You have entered a lower-case letter "; 
+  } 
+  
+  else if (isupper(userchar))
+  {
+      
+      cout<<" You have entered an upper-case letter "; 
+  }  
+  else if (isdigit(userchar))
+  {
+    
+    cout<< " You have entered a digit "; 
+  }    
+  else if (isspace(userchar))
+  {
+    
+   cout<< " You have entered a white-space character "; 
+  }
+  else
+  {
+      
+     cout<< " You have entered a special character "; 
+  }
+ 
+ 
+ return 0; 
+}
