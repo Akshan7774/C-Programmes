@@ -1,0 +1,67 @@
+/* c++ calculator 
+allows decimal numbers 
+4 operations (+,-,/,*)
+*/
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+string operation;
+double number1;
+double number2;
+double termans; 
+
+cout<<"-----------------------------"<<endl; 
+cout<<"----- Basic Calculator ------"<<endl; 
+cout<<"-----------------------------"<<endl; 
+
+cout << " Select Operation: "<<endl; 
+cout<<" Addition [1]"<<endl; 
+cout<<" Subtraction [2]"<<endl; 
+cout<<" Multiplication[3] "<<endl;
+cout<<" Division [4] "<<endl; 
+cout<< " Remainder [5] "<<endl; 
+cout<<" Exit [0]"<<endl; 
+cout<<" Select operation by entering any of the numbers 0,1 - 5:1 "; 
+cin >> operation;
+
+cout << "Enter first operand : ";
+cin >> number1;
+
+cout << " Enter second operand: ";
+cin >> number2;
+
+if(operation == "1"){
+
+cout << number1 + number2;
+
+} else if (operation =="2"){
+
+cout << number1 - number2;
+
+}else if(operation == "3"){
+
+cout << number1 * number2; 
+
+}else if (operation =="4"){
+
+cout << number1 / number2;
+
+}else if (operation =="0"){
+    
+ exit(0);
+}
+
+else {
+
+cout << "Not a recognized operation, 'Select operation by entering any of the numbers 0,1 - 5:1 '. ";
+}
+
+
+
+
+
+return 0;
+}
