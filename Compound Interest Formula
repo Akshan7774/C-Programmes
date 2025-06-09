@@ -60,9 +60,7 @@ cout << fixed << setprecision(2);
 
 cout<<"Final amount after " <<t<<" years = " <<A<<endl; 
 
-if (yearbreakdown == "yes"|| yearbreakdown == "Yes" || yearbreakdown == "YES"); 
-
-{
+if (yearbreakdown == "yes"|| yearbreakdown == "Yes" || yearbreakdown == "YES"){
     
 cout<< " Year 1 = "<<ci1<<endl; 
 cout<< " Year 2 = "<<ci2<<endl; 
@@ -74,8 +72,6 @@ cout<< " Year 7 = "<<ci7<<endl;
 cout<< " Year 8 = "<<ci8<<endl; 
 cout<< " Year 9 = "<<ci9<<endl; 
 cout<< " Year 10 = " <<ci10<<endl;
-
-
 
 }
 
