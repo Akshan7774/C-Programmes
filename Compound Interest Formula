@@ -1,30 +1,83 @@
 #include<iostream>
 #include<cmath>
-using namespace std; 
+#include<string> 
+#include <iomanip>
 
+using namespace std; 
 
 int main ()
 {
     
-/* Introduce Variables*/ 
-double A, P, r, n, t, ci; 
 
-/* Ask for amounts/values to input*/ 
+double A, P, r, n, t;  
+double ci1, ci2, ci3, ci4, ci5, ci6, ci7, ci8, ci9, ci10; 
+string yearbreakdown; 
 
-cout<< " What is the initial balance(P) ? "; 
+
+cout<< " Enter principal amount : "; 
 cin>>P; 
 
-cout<< " What is the interest rate(r) ? "; 
+if (P < 0) {
+        cout << " Error: All inputs must be positive numbers" << endl;
+        return 0;
+    }
+    
+cout<< " Enter annual interest rate (%) : "; 
 cin>>r; 
 
+if (r < 0) {
+        cout << " Error: All inputs must be positive numbers" << endl;
+        return 0;
+    }
 
-cout<<" What is the time period (t) ? "; 
+cout<<" Enter investment time (years):  "; 
 cin>>t; 
 
-ci = P* pow((1+r/100),t)-P; 
-cout<<" Compound interest over "<<t<<" years"<<" with an initial balance of R"<<P<<" with an interest rate of "<<r<<" percent is " <<ci; 
+if (t < 0) {
+        cout << " Error: All inputs must be positive numbers" << endl;
+        return 0;
+    }
+
+cout<<" Show yearly breakdown (yes/no) : "; 
+cin>>yearbreakdown; 
+
+A = P * pow(1 + (r / 100), t);
 
 
+ci1 =  P * pow(1 + (r / 100), 1);
+ci2 =  P * pow(1 + (r / 100), 2);
+ci3 =  P * pow(1 + (r / 100), 3);
+ci4 =  P * pow(1 + (r / 100), 4);
+ci5 =  P * pow(1 + (r / 100), 5);
+ci6 =  P * pow(1 + (r / 100), 6);
+ci7 =  P * pow(1 + (r / 100), 7);
+ci8 =  P * pow(1 + (r / 100), 8);
+ci9 =  P * pow(1 + (r / 100), 9);
+ci10 =  P * pow(1 + (r / 100), 10);
+
+cout << fixed << setprecision(2);
+
+
+cout<<"Final amount after " <<t<<" years = " <<A<<endl; 
+
+if (yearbreakdown == "yes"|| yearbreakdown == "Yes" || yearbreakdown == "YES"); 
+
+{
+    
+cout<< " Year 1 = "<<ci1<<endl; 
+cout<< " Year 2 = "<<ci2<<endl; 
+cout<< " Year 3 = "<<ci3<<endl; 
+cout<< " Year 4 = "<<ci4<<endl; 
+cout<< " Year 5 = "<<ci5<<endl; 
+cout<< " Year 6 = "<<ci6<<endl; 
+cout<< " Year 7 = "<<ci7<<endl; 
+cout<< " Year 8 = "<<ci8<<endl; 
+cout<< " Year 9 = "<<ci9<<endl; 
+cout<< " Year 10 = " <<ci10<<endl;
+
+
+
+}
 
     return 0; 
 }
