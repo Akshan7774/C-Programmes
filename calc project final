@@ -1,61 +1,76 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    string operation;
-    double number1;
-    double number2;
+int main()
+{
+    
+    char return_input;
+    
+    
+    
 
-    cout << "-----------------------------" << endl;
-    cout << "------ Basic Calculator -----" << endl;
-    cout << "-----------------------------" << endl;
+    do {
+        
+        int operation;
+        double number1, number2;
 
-    while (true) {
+        cout << "==============================" << endl;
+        cout << "=======Basic Calculator=======" << endl;
+        cout << "==============================" << endl;
+
         cout << "Select Operation:" << endl;
-        cout << " Addition [1]" << endl;
-        cout << " Subtraction [2]" << endl;
-        cout << " Multiplication [3]" << endl;
-        cout << " Division [4]" << endl;
-        cout << " Remainder [5]" << endl;
-        cout << " Exit [0]" << endl;
+        cout << " [1] Addition " << endl;
+        cout << " [2] Subtraction " << endl;
+        cout << " [3] Multiplication " << endl;
+        cout << " [4] Division " << endl;
+        cout << " [5] Remainder " << endl;
+        cout << " [0] Exit " << endl;
         cout << "Select operation by entering any of the numbers 0,1 - 5: "; 
         cin >> operation;
 
-        
-        if (operation == "0") {
-            cout << "Exitting calculator" << endl;
+        if (operation == 0) {
+            cout << "Exiting calculator..."<<endl; 
             break;
         }
 
-       
         cout << "Enter first operand: ";
         cin >> number1;
-
         cout << "Enter second operand: ";
         cin >> number2;
 
-        if (operation == "1") {
-            cout << number1 << " + " << number2 << " = " << number1 + number2 << endl;
-        } else if (operation == "2") {
-            cout <<number1<< " - " <<number2<< " = " << number1 - number2 <<endl;
-        } else if (operation == "3") {
-            cout <<number1<< " x " <<number2<< " = " << number1 * number2 <<endl;
-        } else if (operation == "4") {
-            if (number2 != 0)
-                cout <<number1<< " / " <<number2<< " = " << number1 / number2 <<endl;
-            else
-                cout << " Division by 0 is undefined " << endl;
-        } else if (operation == "5") {
-            if (static_cast<int>(number2) != 0)
-                cout << static_cast<int>(number1)<< " % "<< static_cast<int>(number2)<< " = "<<static_cast<int>(number1) % static_cast<int>(number2)<<endl;
-            else
-                cout << " Division by 0 is not permitted " << endl;
-        } 
-        
-        else {
-            cout << "Not a recognized operation. Please enter a number from 0 to 5, only integer values are supported." << endl;
+        switch (operation) {
+            case 1:
+                cout << number1 << " + " << number2 << " = " << number1 + number2 << endl;
+                break;
+            case 2:
+                cout << number1 << " - " << number2 << " = " << number1 - number2 << endl;
+                break;
+            case 3:
+                cout << number1 << " * " << number2 << " = " << number1 * number2 << endl;
+                break;
+            case 4:
+                if (number2 != 0)
+                    cout << number1 << " / " << number2 << " = " << number1 / number2 << endl;
+                else
+                    cout << "Division by 0 is undefined"<<endl; 
+                break;
+            case 5:
+                if ((int)number2 != 0)
+                    cout << (int)number1 << " % " << (int)number2 << " = " << (int)number1 % (int)number2 << endl;
+                else
+                    cout << "Division by 0 is undefined"<<endl; 
+                break;
+            default:
+                cout << "Invalid operation selected."<<endl;
         }
-    }
+    
+        cout << " [1] Return to Main Menu "<<endl; 
+        cout<< " [0] Exit calculator "<<endl; 
+        cout<< " : "; 
+        
+        cin >> return_input;
+        cin.ignore();  
+    } while (return_input == '1' || return_input == '1');
 
     return 0;
 }
