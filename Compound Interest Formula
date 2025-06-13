@@ -41,19 +41,19 @@ if (t < 0) {
 cout<<" Show yearly breakdown (yes/no) : "; 
 cin>>yearbreakdown; 
 
-A = P * pow(1 + (r / 100), t);
+A = P * pow(1 + ((r / 100)/12), 12*t);
 
 
-ci1 =  P * pow(1 + (r / 100), 1);
-ci2 =  P * pow(1 + (r / 100), 2);
-ci3 =  P * pow(1 + (r / 100), 3);
-ci4 =  P * pow(1 + (r / 100), 4);
-ci5 =  P * pow(1 + (r / 100), 5);
-ci6 =  P * pow(1 + (r / 100), 6);
-ci7 =  P * pow(1 + (r / 100), 7);
-ci8 =  P * pow(1 + (r / 100), 8);
-ci9 =  P * pow(1 + (r / 100), 9);
-ci10 =  P * pow(1 + (r / 100), 10);
+ci1 =  P * pow(1 + ((r / 100)/12), 12*1);
+ci2 =  P * pow(1 + ((r / 100)/12), 12*2);
+ci3 =  P * pow(1 + ((r / 100)/12), 12*3);
+ci4 =  P * pow(1 + ((r / 100)/12), 12*4);
+ci5 =  P * pow(1 + ((r / 100)/12), 12*5);
+ci6 =  P * pow(1 + ((r / 100)/12), 12*6);
+ci7 =  P * pow(1 + ((r / 100)/12), 12*7);
+ci8 =  P * pow(1 + ((r / 100)/12), 12*8);
+ci9 =  P * pow(1 + ((r / 100)/12), 12*9);
+ci10 =  P * pow(1 + ((r / 100)/12), 12*10);
 
 cout << fixed << setprecision(2);
 
